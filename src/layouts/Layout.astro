@@ -1,0 +1,64 @@
+---
+import { NormalizeCSS } from "@styles/normalize";
+import { Global } from "@emotion/react";
+import { PreviewPng } from "@static/images";
+import { Header } from "@modules/Header";
+import { Footer } from "@modules/Footer";
+import MetaConfig from "./MetaConfig.astro";
+
+import "@styles/tailwind/tailwind.output.css";
+
+interface Props {
+    title: string;
+    description: string;
+    overwritePreview?: string;
+}
+
+const { title, description, overwritePreview } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <MetaConfig
+            title={title}
+            description={description}
+            preview={overwritePreview ? overwritePreview : PreviewPng.src}
+        />
+        <title>{title}</title>
+
+        <Global styles={NormalizeCSS} />
+    </head>
+    <body class="bg-primary">
+        <Header client:load />
+        <slot />
+        <Footer />
+        <script>
+            // Get all Elements with data-animate attribute & animate  them on scroll
+            const animateOnScroll = () => {
+                const elements = document.querySelectorAll("[data-animate]");
+                if (elements.length === 0) return;
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                // set atricle to fade-in
+                                entry.target.classList.add("animate-fade-in");
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.5,
+                    }
+                );
+
+                elements.forEach((element) => {
+                    observer.observe(element);
+                });
+            };
+            window.addEventListener("scroll", animateOnScroll);
+            // load script on load
+            window.addEventListener("load", animateOnScroll);
+        </script>
+    </body>
+</html>

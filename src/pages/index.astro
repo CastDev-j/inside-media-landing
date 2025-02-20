@@ -1,0 +1,173 @@
+---
+import { Hero } from "@blocks/Hero";
+import Layout from "../layouts/Layout.astro";
+import { Logos } from "@blocks/Logos";
+import { Service } from "@blocks/Service";
+import { Stats } from "@blocks/Stats";
+import { Testimonials } from "@blocks/Testimonials";
+import { ImageContent } from "@blocks/ImageContent";
+---
+
+<Layout title="pendiente" description="YOUR META DESCRIPTION FOR SEO">
+  <main class="page-content pb-24">
+    <Hero
+      heroType="contentImage"
+      data={{
+        label: `Crea tu presencia en línea ahora`,
+        logo: "logo",
+        title: `Lleva tu imagen a la web con "pendiente"`,
+        description: `Desde el diseño hasta el hosting y el dominio, te ofrecemos una solución completa en base a tus necesidades.`,
+        image: "heroImg",
+        button: {
+          text: "Descubre nuestros servicios",
+          link: "/servicios",
+          variant: "primary",
+        },
+      }}
+    />
+
+    <Logos
+      data={{
+        title: "Companias que confian en nosotros",
+        logos: ["logo1", "logo2", "logo3", "logo4"],
+      }}
+    />
+
+    <Service
+      data={{
+        aboveTitle: "Nuestros servicios",
+        title: "Ofrecemos una amplia gama de servicios",
+        description:
+          "Somos una empresa de diseño web y marketing digital que ofrece servicios de diseño web, desarrollo de aplicaciones, marketing digital y branding.",
+        services: [
+          {
+            title: "Creación de sitios web",
+            description:
+              "Nosotros creamos sitios web atractivos y funcionales que se adaptan a cualquier dispositivo.",
+            icon: "cloud",
+          },
+          {
+            title: "Marketing digital",
+            description:
+              "Te ayudamos a aumentar tu presencia en línea y atraer más clientes a tu negocio.",
+            icon: "testimonial",
+          },
+          {
+            title: "Branding",
+            description:
+              "Creamos una identidad de marca única y atractiva que te ayudará a destacar en el mercado.",
+            icon: "repeat",
+          },
+          {
+            title: "Tu propio dominio",
+            description:
+              "Te ayudamos a elegir el dominio perfecto para tu sitio web y a configurarlo correctamente.",
+            icon: "fingerprint",
+          },
+        ],
+      }}
+    />
+
+    <Stats
+      data={{
+        title: "Costos competitivos",
+        description:
+          "Somos una empresa con precios competitivos, ofrecemos una amplia gama de servicios a precios asequibles. si tienes alguna pregunta o cotización, no dudes en contactarnos.",
+        stats: [
+          {
+            title: "Página para tu negocio",
+            variant: "white",
+            description: `
+            <b><h5>Costos:</h5></b> 
+            <br>
+            <ul>
+                <li><b>Precio de creación:</b> $5,000 MXN</li>
+                <li><b>Dominio:</b> Sujeto al mercado</li>
+                <li><b>Mantenimiento:</b> $1,500 MXN mensuales</li>
+            </ul>
+            <br><br>
+            <b><h5>Detalles:</h5></b>
+            <br>
+            <p>Una página simple y efectiva para dar a conocer tu negocio, con un diseño profesional que atrae clientes.</p>
+        `,
+          },
+          {
+            title: "Página para promocionar eventos o productos",
+            variant: "black",
+            description: `
+            <b><h5>Costos:</h5></b>
+            <br>
+            <ul>
+                <li><b>Precio de creación:</b> $6,000 MXN</li>
+                <li><b>Dominio:</b> Sujeto al mercado</li>
+                <li><b>Mantenimiento:</b> $1,800 MXN mensuales</li>
+            </ul>
+            <br><br>
+            <b><h5>Detalles:</h5></b>
+            <br>
+            <p>Ideal para presentar nuevos productos o eventos, con un diseño atractivo y fácil de navegar.</p>
+        `,
+          },
+          {
+            title: "Portafolio para mostrar tu trabajo",
+            variant: "blue",
+            description: `
+            <b><h5>Costos:</h5></b>
+            <br>
+            <ul>
+                <li><b>Precio de creación:</b> $4,500 MXN</li>
+                <li><b>Dominio:</b> Sujeto al mercado</li>
+                <li><b>Mantenimiento:</b> $1,200 MXN mensuales</li>
+            </ul>
+            <br><br>
+            <b><h5>Detalles:</h5></b>
+            <br>
+            <p>Muestra tus proyectos y habilidades en un diseño personalizado para destacar tu trabajo y atraer oportunidades.</p>
+        `,
+          },
+        ],
+      }}
+    />
+
+    <ImageContent
+      data={{
+        aboveTitle: "Sobre nosotros",
+        description:
+          "Somos una empresa en crecimiento conformada por un equipo de estudiantes del Instituto Tecnológico de Celaya, apasionados por la tecnología y el diseño web. Nuestro objetivo es ayudar a las pequeñas y medianas empresas a tener una presencia en línea efectiva y atractiva.",
+        image: "heroImg",
+        title: "¿Por qué elegirnos?",
+        imagePosition: "right",
+      }}
+    />
+
+    <Testimonials
+      data={{
+        aboveTitle: "Testimonios",
+        title: "Lo que nuestros clientes dicen de nosotros",
+        description:
+          "Estos son algunos de los testimonios de nuestros clientes satisfechos que han confiado en nosotros para crear su presencia en línea.",
+        authors: [
+          {
+            authorName: "Carlos Pérez",
+            authorRole: "Propietario de negocio",
+            content:
+              "El equipo de 'pendiente' hizo un trabajo excepcional con nuestro sitio web. Su atención al detalle y profesionalismo superaron nuestras expectativas.",
+          },
+          {
+            authorName: "María López",
+            authorRole: "Gerente de Marketing",
+            content:
+              "Gracias a 'pendiente', nuestra presencia en línea ha mejorado significativamente. Su servicio al cliente es excelente y siempre están dispuestos a ayudar.",
+          },
+          {
+            authorName: "Juan Rodríguez",
+            authorRole: "Emprendedor",
+            content:
+              "Recomiendo ampliamente a 'pendiente'. Nos ayudaron a crear una página web increíble que ha atraído a muchos nuevos clientes a nuestro negocio.",
+          },
+        ],
+      }}
+    />
+
+  </main>
+</Layout>

@@ -1,0 +1,28 @@
+---
+import { ContentSection } from "@blocks/ContentSection";
+import Layout from "../layouts/Layout.astro";
+import { Button } from "@components/Button";
+---
+
+<Layout
+    title="404 | Page not found"
+    description="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+>
+    <main class="page-content">
+        <ContentSection>
+            <div
+                class="text-center max-w-xl lg:my-32 flex flex-col gap-5 justify-center items-center"
+            >
+                <h1 class="text-h1-lg">Wooops - Sorry! 404</h1>
+                <p>
+                    The page you are looking for might have been removed, had
+                    its name changed, or is temporarily unavailable.
+                </p>
+
+                <Button variant="primary" link="/" align="center">
+                    Go back
+                </Button>
+            </div>
+        </ContentSection>
+    </main>
+</Layout>

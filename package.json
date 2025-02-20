@@ -1,0 +1,41 @@
+{
+  "name": "codexcode-astro-starter",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "npm-run-all --parallel astro:dev tailwind:watch",
+    "astro:dev": "astro dev",
+    "tailwind:watch": "tailwindcss -i ./src/styles/tailwind/tailwind.css -o ./src/styles/tailwind/tailwind.output.css --watch",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.9",
+    "@astrojs/react": "^3.1.0",
+    "@astrojs/sitemap": "^3.1.4",
+    "@astrojs/tailwind": "^5.1.0",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@hookform/resolvers": "^3.3.4",
+    "astro": "^4.5.8",
+    "axios": "^1.6.8",
+    "codexcode-astro-starter": "file:",
+    "react-device-detect": "^2.2.3",
+    "react-hook-form": "^7.51.3",
+    "react-icons": "^5.5.0",
+    "sitemap": "^7.1.1",
+    "swiper": "^11.1.1",
+    "typescript": "^5.4.3",
+    "vite-plugin-compression": "^0.5.1",
+    "yarn": "^1.22.22",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/aos": "^3.0.7",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.4.3",
+    "vite-plugin-svgr": "^4.2.0"
+  }
+}
